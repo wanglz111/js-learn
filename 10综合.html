@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        订单确认页面
+    </h1>
+    <table>
+        <tr>
+            <td>商品名称</td>
+            <td>商品价格</td>
+            <td>商品数量</td>
+            <td>商品总价</td>
+        </tr>
+        <tr id="goods">
+        </tr>
+    </table>
+    <script>
+        let name = prompt("请输入商品名称");
+        let price = prompt("请输入商品价格");
+        let num = prompt("请输入商品数量");
+        let total = parseInt(price) * parseInt(num);
+        let str = `<td>${name}</td><td>${price}</td><td>${num}</td><td>${total}</td>`;
+        document.getElementById("goods").innerHTML = str;
+    </script>
+</body>
+
+</html>
